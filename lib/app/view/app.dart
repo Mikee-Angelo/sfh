@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:sfh/core/modules/app_module.dart';
 import 'package:sfh/counter/counter.dart';
 import 'package:sfh/l10n/l10n.dart';
 
@@ -7,16 +9,19 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+    return ModularApp(
+      module: AppModule(),
+      child: MaterialApp.router(
+        theme: ThemeData(
+          appBarTheme: AppBarTheme(
+            backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          ),
+          useMaterial3: true,
         ),
-        useMaterial3: true,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        routerConfig: Modular.routerConfig,
       ),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
     );
   }
 }
