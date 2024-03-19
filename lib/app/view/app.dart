@@ -26,6 +26,7 @@ class _AppState extends State<App> {
         ),
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       routerConfig: Modular.routerConfig,

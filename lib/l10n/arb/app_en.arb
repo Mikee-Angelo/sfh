@@ -1,7 +1,6 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    }
+    "onboardingTitle": "Your #1 Financial Resource", 
+    "onboardingDescription": "Our mission is to learn and understand your needs and long-term goals",
+    "onboardingGetStarted": "Get Started"
 }
