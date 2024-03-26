@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:sfh/core/utils/constants.dart';
+import 'package:sfh/features/auth/presentation/pages/signup_page.dart';
 import 'package:sfh/gen/assets.gen.dart';
 import 'package:sfh/l10n/l10n.dart';
 
@@ -41,9 +43,10 @@ class OnboardingPage extends StatelessWidget {
               AppButton(
                 color: Constants.primaryColor,
                 textColor: Colors.white,
+                enableScaleAnimation: false,
                 width: double.infinity,
                 elevation: 0,
-                onTap: () {},
+                onTap: () => Modular.to.pushNamed(SignupPage.routeName),
                 text: l10n.onboardingGetStarted,
               ),
             ],

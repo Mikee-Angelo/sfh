@@ -6,6 +6,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   app_links
   connectivity_plus
   nb_utils
+  smart_auth
   url_launcher_windows
 )
 
